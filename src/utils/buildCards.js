@@ -1,4 +1,4 @@
-import { suffle } from "./suffle";
+import { shuffle } from "./shuffle";
 import backImg from "../assets/backImage.jpg";
 import image1 from "../assets/image1.jpg";
 import image2 from "../assets/image2.jpg";
@@ -31,10 +31,9 @@ export function buildCards(cardsAmount) {
       image12,
     ];
     const images = {};
-    for (let index = 0; index < cardsAmount/2; index++) {
+    for (let index = 0; index < cardsAmount / 2; index++) {
       images[pull[index]] = pull[index];
     }
-    
 
     const cards = Object.keys(images).reduce((result, key) => {
       const createCard = () => ({
@@ -44,11 +43,11 @@ export function buildCards(cardsAmount) {
         frontImg: images[key],
         flipped: false,
       });
-        result.push(createCard());
-        result.push(createCard());
+      result.push(createCard());
+      result.push(createCard());
 
       return result;
     }, []);
-    return suffle(cards);
+    return shuffle(cards);
   }
 }

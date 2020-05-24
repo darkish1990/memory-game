@@ -1,4 +1,4 @@
-export function suffle(arr) {
+export function shuffle(arr) {
   let len = arr.length;
   for (let i = 0; i < len; i++) {
     let randomIdx = Math.floor(Math.random() * len);
