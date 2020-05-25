@@ -6,23 +6,22 @@ import "./StartingPage.css";
 const StartingPage = () => {
   const arrOfPlayers = [];
   const { updateArrOfPlayers } = useContext(GameContext);
-  const [numberofplayers, setNumberofplayers] = useState(1);
-  const createPlayerList = () => {
-    for (let index = 0; index < numberofplayers; index++) {
-      arrOfPlayers.push({
-        name: `player${index}`,
-        score: 0,
-        typesFound: [],
-        active: false,
-      });
-    }
-    arrOfPlayers[0].active = true;
-    updateArrOfPlayers(arrOfPlayers);
+  const [numberOfPlayers, setNumberOfPlayers] = useState(1);
+  const createPlayerList = (chosenNumberOfPlayers ) => {
+      for (let index = 0; index < chosenNumberOfPlayers; index++) {
+        arrOfPlayers.push({
+          name: `player${index}`,
+          score: 0,
+          typesFound: [],
+          active: false,
+        });
+      }
+      arrOfPlayers[0].active = true;
+      updateArrOfPlayers(arrOfPlayers);
   };
-  
+
   const [cardsGroups, setCardsGroups] = useState(8);
-  
-  
+
   return (
     <form className="form">
       <div className="cards-amount-container">
@@ -42,9 +41,10 @@ const StartingPage = () => {
         <input
           className="numberofplayers-input"
           type="number"
-          placeholder="Enter number of players (default is 1)"
+          required
+          placeholder="Players"
           onChange={(e) => {
-            setNumberofplayers(e.target.value);
+            setNumberOfPlayers(e.target.value);
           }}
         />
       </div>
@@ -58,7 +58,11 @@ const StartingPage = () => {
           <button
             className="glow-on-hover"
             onClick={() => {
-              createPlayerList();
+              if (numberOfPlayers > 0) {
+                createPlayerList(numberOfPlayers);
+              } else {
+                createPlayerList(1);
+              }
             }}
           >
             Begin!

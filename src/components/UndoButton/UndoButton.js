@@ -1,5 +1,6 @@
 import React from "react";
-const UndoButton = ({triggerUndo}) => {
+import "./UndoButton.css";
+const UndoButton = ({ triggerUndo }) => {
   return (
     <div className="undo-button">
       <button

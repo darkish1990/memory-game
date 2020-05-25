@@ -25,10 +25,14 @@ const GameContextProvider = (props) => {
     setCompleted([]);
   };
   const decrementScore = (element) => {
-    const playerToDecrementScore = gameHandler.arrOfPlayers.findIndex((x) =>
-      x["typesFound"].includes(element)
-    );
-    gameHandler.arrOfPlayers[playerToDecrementScore]["score"] -= 1;
+    if (element) {
+      const playerToDecrementScore = gameHandler.arrOfPlayers.findIndex((x) =>
+        x["typesFound"].includes(element)
+      );
+      if (gameHandler.arrOfPlayers[playerToDecrementScore]["score"] > 0) {
+        gameHandler.arrOfPlayers[playerToDecrementScore]["score"] -= 1;
+      }
+    }
   };
   const incrementScore = (currentPlayer, type) => {
     const currentPlayerindex = gameHandler.arrOfPlayers.findIndex(

@@ -1,41 +1,13 @@
-.numberofplayers-input {
-  width: 320px;
-  height: 50px;
-  font-weight: 400;
-  font-size: large;
-  text-align: center;
-  margin: 30px;
-}
-.numberofplayers-input:focus::-webkit-input-placeholder {
-  transition: text-indent 0.5s 0.5s ease; 
-  text-indent: -120%;
-  opacity: 1;
+.undo-button {
+  grid-area: Button;
+  margin: 100px;
+  width: 400px;
 }
 
-.form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.cards-amount-container {
-  margin: 20px;
-}
-.cards-amount-container select {
-  height: 20px;
-  width: 50px;
-  font-size: medium;
-}
-.cards-amount-container label {
-  font-size: large;
-  font-weight: 800;
-}
-.button-container {
-  margin: 20px;
-}
 .glow-on-hover {
   font-size: larger;
   font-weight: bolder;
+  width: 400px;
   height: 80px;
   border: none;
   outline: none;
@@ -68,6 +40,7 @@
   );
   position: absolute;
   top: -2px;
+  width: 400px;
   left: -2px;
   background-size: 400%;
   z-index: -1;
@@ -95,6 +68,7 @@
   z-index: -1;
   content: "";
   position: absolute;
+  width: 400px;
   height: 100%;
   background: rgb(214, 62, 62);
   background: linear-gradient(
@@ -106,6 +80,7 @@
   top: 0;
   border-radius: 10px;
 }
+
 
 @keyframes glowing {
   0% {

@@ -25,19 +25,24 @@ const Game = (props) => {
 
   return (
     <div className="game-container">
-      <Score
-        className="Score"
-        arrOfPlayers={gameHandler.arrOfPlayers}
-        currentPlayer={currentPlayer}
-      />
-      <UndoButton triggerUndo={triggerUndo} />
-      <Board
-        className="Board"
-        cardsGroups={cardsGroups}
-        arrOfPlayers={gameHandler.arrOfPlayers}
-        setArrOfPlayers={setArrOfPlayers}
-        triggerUndo={triggerUndo}
-      />
+      <div className="area-1">
+        <h1>Memory Game!</h1>
+        <Board
+          className="Board"
+          cardsGroups={cardsGroups}
+          arrOfPlayers={gameHandler.arrOfPlayers}
+          setArrOfPlayers={setArrOfPlayers}
+          triggerUndo={triggerUndo}
+        />
+      </div>
+      <div className="area-2">
+        <Score
+          className="Score"
+          arrOfPlayers={gameHandler.arrOfPlayers}
+          currentPlayer={currentPlayer}
+        />
+        <UndoButton triggerUndo={triggerUndo} />
+      </div>
     </div>
   );
 };

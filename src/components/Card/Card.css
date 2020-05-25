@@ -1,5 +1,7 @@
 .Card{
-    flex: 1
+    flex: 1;
+    margin-left: 10px;
+    margin-bottom: 10px;
   }
   
   .Card:hover{
@@ -8,5 +10,8 @@
   
   .Card img{
     width: 100px;
-    height: 100px;
+    height: 150px;
+    box-shadow: 0px 0px 7px 3px #cac6c6;
+    border: 3px solid white;
+    object-fit: cover;
   }

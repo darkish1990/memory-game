@@ -1,5 +1,5 @@
 import { shuffle } from "./shuffle";
-import backImg from "../assets/backImage.jpg";
+import back_card from "../assets/back_card.png";
 import image1 from "../assets/image1.jpg";
 import image2 from "../assets/image2.jpg";
 import image3 from "../assets/image3.jpg";
@@ -39,7 +39,7 @@ export function buildCards(cardsAmount) {
       const createCard = () => ({
         id: id++,
         type: key,
-        backImg: backImg,
+        back_card: back_card,
         frontImg: images[key],
         flipped: false,
       });
