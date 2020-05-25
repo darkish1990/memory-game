@@ -17,7 +17,8 @@ th {
   padding: 10px;
   border: 1px solid #ccc;
   text-align: left;
-  font-size: 18px;
+  font-size: 21px;
+  font-family: monospace;
 }
 .active {
   background-color: #f7c4a3;
