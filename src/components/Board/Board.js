@@ -8,7 +8,7 @@ import {
   cardAlreadyIncouples,
   couplesFull,
   resetCouplesAfter,
-} from "./../../utils/boardUtils";
+} from "./../../utils/boardUtils.js";
 import BoardCreator from "../BoardCreator/BoardCreator";
 
 const SINGLE_SECOND = 1000;
