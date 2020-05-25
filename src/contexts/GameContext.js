@@ -6,6 +6,7 @@ const GameContextProvider = (props) => {
   const [gameHandler, setGameHandler] = useState({});
   const [currentPlayer, setCurrentPlayer] = useState({});
   const [completed, setCompleted] = useState([]);
+  const [winner, setWinner] = useState([]);
 
   const updateArrOfPlayers = (arrOfPlayers) => {
     setGameHandler({ ...gameHandler, arrOfPlayers });
@@ -75,6 +76,8 @@ const GameContextProvider = (props) => {
         completed,
         setCompleted,
         FindWinner,
+        winner,
+        setWinner,
       }}
     >
       {props.children}
